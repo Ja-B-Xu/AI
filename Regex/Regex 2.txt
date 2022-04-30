@@ -1,0 +1,14 @@
+import sys
+idx = int(sys.argv[1])-40
+myRegexList = [
+    r"/^[x.o]{64}$/i",  # Question 40
+    r"/^[xo]*\.[xo]*$/i",  
+    r"/^(x+o*)?\.|\.(o*x+)?$/i", 			
+    r"/^.(..)*$/s",
+    r"/^(0|10|11)([01]{2})*$/s",  
+    r"/\w*(a[eiou]|e[aiou]|i[aeou]|o[aeiu]|u[aeio])\w*/i",
+    r"/^(1?0)*1*$/",				
+    r"/^[bc]*[abc][bc]*$/",   					
+    r"/^(a[bc]*a|b|c)+$/",				
+    r"/^(20*|1[02]*10*)+$/"]  					# Question 49    
+print(myRegexList[idx])
